@@ -62,12 +62,27 @@ var lista =
   }
 ]
 
+//Recorrer y mostrar el "title" del arreglo de objetos (en formato de lista), lo cual corresponde a nuestra tarea:
 lista.forEach(function(e){
 	contenedor.innerHTML += "<ul><li>" + e.title + "<br>" + "</ul></il>";
 })
-
-function anadirTarea(){
+//Función que agrega las tareas a la lista ya creada a través de un botón "Añadir":
+function agregarTarea(){
 	var valorInput = document.getElementById("tarea").value;
-	var conTarea = document.getElementsByClassName("añadir-tarea");
-	conTarea[0].innerHTML += "<ul><li>" + valorInput + "</ul></li>";
+	var addTarea = document.getElementsByClassName("añadir-tarea");
+	addTarea[0].innerHTML += "<ul><li>" + valorInput + "</ul></li>";
 }
+
+//Constructor que añade la tarea ingresada por el usuario a el arreglo de objetos con sus respectivos atributos:
+
+function Lista(userId, id, title, completed){
+	this.userId = userId;
+	this.id = id;
+	this.title = title;
+	this.completed = completed;
+	this.agregar = function(){
+
+	}
+}
+
+var nuevaTarea = new Lista(1, 11, agregarTarea(), false);
