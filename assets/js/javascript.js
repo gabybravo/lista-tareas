@@ -71,7 +71,7 @@ lista.forEach(function(e){
 function agregarTarea(){
 	var valorTarea = document.getElementById("tarea").value;
 	var addTarea = document.getElementsByClassName("añadir-tarea");
-	addTarea[0].innerHTML += "<li>" + valorTarea + "</li>";
+	addTarea[0].innerHTML += "<li>" + valorTarea + "</li>" + "<br>";
 
 //Constructor que añade la tarea ingresada por el usuario a el arreglo de objetos con sus respectivos atributos:
 function Lista(valorTarea){
