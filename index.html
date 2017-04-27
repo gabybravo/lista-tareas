@@ -5,6 +5,24 @@
 	<title>Lista de Tareas</title>
 </head>
 <body>
-	
+<h1> Lista de Tareas</h1>
+<div id= "contenedor"></div>
+
+<form id="frm1">
+Tarea: <input type="text" name="name" id="task"><br>
+</form> 
+<button id="print" onclick="boton" type="submit">Mostrar Tarea</button><br>
+<div id="datos">
+<script>
+var boton = document.getElementById('print');
+	boton.addEventListener("click", function(click){
+	click.preventDefault();
+	var tarea = document.getElementById('task').value;
+	var espacio = document.getElementById('datos');
+	espacio.innerHTML = "La tarea ingresada es: " + tarea + "<br>";
+})
+</script>
+
+<script src="assets/js/javascript.js"></script>
 </body>
 </html>
