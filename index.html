@@ -7,21 +7,14 @@
 <body>
 <h1> Lista de Tareas</h1>
 <div id= "contenedor"></div>
+	<hr>
 
-<form id="frm1">
-Tarea: <input type="text" name="name" id="task"><br>
-</form> 
-<button id="print" onclick="boton" type="submit">Mostrar Tarea</button><br>
-<div id="datos">
-<script>
-var boton = document.getElementById('print');
-	boton.addEventListener("click", function(click){
-	click.preventDefault();
-	var tarea = document.getElementById('task').value;
-	var espacio = document.getElementById('datos');
-	espacio.innerHTML = "La tarea ingresada es: " + tarea + "<br>";
-})
-</script>
+	<label for="tarea">Añadir nueva tarea:</label>
+	<input type="text" name="name" id="tarea">
+	<button id="print" onclick="anadirTarea()" >Añadir</button>
+	<div class="añadir-tarea"></div>
+	
+	<div id="lista"></div>
 
 <script src="assets/js/javascript.js"></script>
 </body>

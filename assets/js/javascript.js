@@ -66,3 +66,8 @@ lista.forEach(function(e){
 	contenedor.innerHTML += "<ul><li>" + e.title + "<br>" + "</ul></il>";
 })
 
+function anadirTarea(){
+	var valorInput = document.getElementById("tarea").value;
+	var conTarea = document.getElementsByClassName("añadir-tarea");
+	conTarea[0].innerHTML += "<ul><li>" + valorInput + "</ul></li>";
+}
