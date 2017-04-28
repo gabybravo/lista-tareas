@@ -76,7 +76,7 @@ function agregarTarea(){
 //Constructor que añade la tarea ingresada por el usuario a el arreglo de objetos con sus respectivos atributos:
 function Lista(valorTarea){
 	this.userId = 1;
-	this.id = lista.length;
+	this.id = lista.length + 1;
 	this.title = valorTarea;
 	this.completed = false;
 	}
